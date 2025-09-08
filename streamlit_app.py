@@ -28,7 +28,7 @@ st.write("The name will be", name_on_order)
 
 #st.write("You selected:", options)
 
-session = get_active_session()
+#session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
