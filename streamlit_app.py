@@ -1,6 +1,7 @@
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
+from snowflake.snowpark.functions import col
+# from snowflake.snowpark.context import get_active_session
 
 # Write directly to the app
 st.title(f"Customize your Smoothie ")
@@ -20,7 +21,7 @@ st.write("The name will be", name_on_order)
 
 ##st.write("Your favourite food is:", option)
 
-from snowflake.snowpark.functions import col
+
 
 
 
@@ -61,3 +62,6 @@ if submitted:
             session.sql(my_insert_stmt).collect()
         
             st.success('Your Smoothie is ordered!', icon="✅")
+cnx = st.connection("snowflake")
+session = cnx.session()
+
