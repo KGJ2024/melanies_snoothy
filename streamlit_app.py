@@ -50,7 +50,7 @@ st.dataframe(pd_df)
 
 
 ingredients_list = st.multiselect(
-    "Choose upto 5 ingrdients"  ,  my_dataframe, max_selections=5
+    "Choose upto 5 ingrdients"  ,  my_dataframe, max_selections=6
 )
 
 submitted = st.button('Submit')
